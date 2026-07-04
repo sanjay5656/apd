@@ -27,7 +27,21 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <nav className="flex gap-6 px-6 py-4 border-b border-foreground/10">
+          <a href="/" className="font-heading text-sm text-foreground">SAN</a>
+          <a href="/ventures" className="text-sm text-muted hover:text-foreground transition">
+            Ventures
+          </a>
+          <a href="/founder" className="text-sm text-muted hover:text-foreground transition">
+            Founder
+          </a>
+          <a href="/contact" className="text-sm text-muted hover:text-foreground transition">
+            Contact
+          </a>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
